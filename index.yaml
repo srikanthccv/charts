@@ -3,13 +3,13 @@ entries:
   clickhouse:
   - apiVersion: v2
     appVersion: 22.8.8
-    created: "2023-05-12T12:27:52.270531339Z"
+    created: "2023-06-07T10:54:20.092109245Z"
     dependencies:
     - name: zookeeper
       repository: https://raw.githubusercontent.com/bitnami/charts/pre-2022/bitnami
       version: 7.0.5
     description: A Helm chart for ClickHouse
-    digest: bcda05e3284342c6177fb0a5abeba92eef6ae2f5f30919b8b3b78dc68de5a9de
+    digest: e541e5005cd6d752ab32a00f7e2f1a5ff529c214228a39ee90f29dffa30423ac
     icon: https://raw.githubusercontent.com/ClickHouse/ClickHouse/master/website/images/logo-400x240.png
     maintainers:
     - email: hello@signoz.io
@@ -24,14 +24,14 @@ entries:
     - https://github.com/ClickHouse/ClickHouse
     type: application
     urls:
-    - https://github.com/srikanthccv/charts/releases/download/clickhouse-23.10.0/clickhouse-23.10.0.tgz
-    version: 23.10.0
+    - https://github.com/srikanthccv/charts/releases/download/clickhouse-23.10.1/clickhouse-23.10.1.tgz
+    version: 23.10.1
   k8s-infra:
   - apiVersion: v2
-    appVersion: 0.71.0
-    created: "2023-05-12T12:27:52.450608567Z"
+    appVersion: 0.76.1
+    created: "2023-06-07T10:54:20.256757414Z"
     description: Helm chart for collecting metrics and logs in K8s
-    digest: ed5b8fc1b40f7e777f1acbd87d3ed5834d163608454947535a6c1f4cc5f7e348
+    digest: d4c1657ab2e242fed06f7fafde46665eec833e1cd2ef433480c9ed705c9a0a56
     home: https://signoz.io
     icon: https://signoz.io/img/SigNozLogo-orange.svg
     keywords:
@@ -53,21 +53,21 @@ entries:
     - https://github.com/open-telemetry/opentelemetry-collector-contrib
     type: application
     urls:
-    - https://github.com/srikanthccv/charts/releases/download/k8s-infra-0.8.0/k8s-infra-0.8.0.tgz
-    version: 0.8.0
+    - https://github.com/srikanthccv/charts/releases/download/k8s-infra-0.8.2/k8s-infra-0.8.2.tgz
+    version: 0.8.2
   signoz:
   - apiVersion: v2
-    appVersion: 0.18.3
-    created: "2023-05-12T12:27:52.692417345Z"
+    appVersion: 0.19.0
+    created: "2023-06-07T10:54:20.498063392Z"
     dependencies:
     - condition: clickhouse.enabled
       name: clickhouse
       repository: https://signoz.github.io/charts
-      version: 23.10.0
+      version: 23.10.1
     - condition: k8s-infra.enabled
       name: k8s-infra
       repository: https://signoz.github.io/charts
-      version: 0.8.0
+      version: 0.8.2
     - condition: cert-manager.enabled
       name: cert-manager
       repository: https://charts.jetstack.io
@@ -85,7 +85,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 10.1.5
     description: SigNoz Observability Platform Helm Chart
-    digest: 9c4edf102235b63fd6ce4cb15a2a925a20780d2764fd87f162b8a0e7d7b7f1a5
+    digest: 8fe4f21af497b2b9b1e42bbed1756cb1c30381dfde3fe89f9888f5728906f3a0
     home: https://signoz.io/
     icon: https://signoz.io/img/SigNozLogo-orange.svg
     keywords:
@@ -110,6 +110,6 @@ entries:
     - https://github.com/signoz/signoz-otel-collector
     type: application
     urls:
-    - https://github.com/srikanthccv/charts/releases/download/signoz-0.14.4/signoz-0.14.4.tgz
-    version: 0.14.4
-generated: "2023-05-12T12:27:52.692427945Z"
+    - https://github.com/srikanthccv/charts/releases/download/signoz-0.15.1/signoz-0.15.1.tgz
+    version: 0.15.1
+generated: "2023-06-07T10:54:20.498074492Z"
